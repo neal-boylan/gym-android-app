@@ -39,32 +39,52 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/workoutTitle"
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:entries="@array/weeklyWorkoutKeys"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_margin="8dp"
-                    android:autofillHints="hint"
-                    android:hint="@string/hint_workoutTitle"
-                    android:inputType="text"
-                    android:maxLength="25"
-                    android:maxLines="1"
                     android:padding="8dp"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="16sp" />
 
-                <EditText
-                    android:id="@+id/workoutDescription"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_margin="8dp"
-                    android:hint="@string/hint_workoutDescription"
-                    android:inputType="text"
-                    android:maxLength="25"
-                    android:maxLines="1"
-                    android:padding="8dp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="14sp" />
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/background_light"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/workoutExercise"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_margin="8dp"
+                        android:autofillHints="hint"
+                        android:hint="@string/hint_workoutExercise"
+                        android:inputType="text"
+                        android:maxLength="25"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp"
+                        android:layout_weight="1"/>
+
+                    <EditText
+                        android:id="@+id/workoutWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_margin="8dp"
+                        android:autofillHints="hint"
+                        android:hint="@string/hint_workoutWeight"
+                        android:inputType="number"
+                        android:maxLength="25"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14sp"
+                        android:layout_weight="2"/>
+                </LinearLayout>
 
                 <Button
                     android:id="@+id/btnAdd"

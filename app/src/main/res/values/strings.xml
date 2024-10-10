@@ -1,6 +1,32 @@
 <resources>
     <string name="app_name">gym-android-app</string>
     <string name="button_addWorkout">Add Workout</string>
-    <string name="hint_workoutTitle">Workout Title</string>
-    <string name="hint_workoutDescription">Workout Description </string>
+    <string name="hint_workoutExercise">Exercise</string>
+    <string name="hint_workoutWeight">Weight </string>
+
+    <string-array name="weeklyWorkoutKeys">
+        <item>Strength Day 1</item>
+        <item>Strength Day 2</item>
+        <item>Strength Day 3</item>
+        <item>Strength Day 4</item>
+        <item>Strength Day 5</item>
+        <item>Conditioning Day 1</item>
+        <item>Conditioning Day 2</item>
+        <item>Conditioning Day 3</item>
+        <item>Conditioning Day 4</item>
+        <item>Conditioning Day 5</item>
+    </string-array>
+
+    <string-array name="weeklyWorkouts">
+        <item>Squat 5x5</item>
+        <item>Bench 5x5</item>
+        <item>Deadlift 5x5</item>
+        <item>Press 5x5</item>
+        <item>Arms 5x5</item>
+        <item>Row 5000m</item>
+        <item>Bike 10,000m</item>
+        <item>Ski 5000m</item>
+        <item>Run 4km</item>
+        <item>HIIT Session</item>
+    </string-array>
 </resources>
