@@ -1,6 +1,8 @@
 package org.wit.gym_android_app.activities
 
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import org.wit.gym_android_app.R
@@ -49,6 +51,18 @@ class GymActivity : AppCompatActivity() {
                     .make(it,"Please Enter a title", Snackbar.LENGTH_LONG)
                     .show()
             }
+        }
+
+        binding.spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                i("Spinner item selected: $position")
+                binding.workoutExercise.setText(workoutMap[binding.spinner.selectedItem.toString()])
+            }
+
         }
     }
 }
